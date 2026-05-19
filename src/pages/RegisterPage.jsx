@@ -4,6 +4,7 @@
 import { useState } from 'react'
 
 const RegisterPage = () => {
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
@@ -14,7 +15,7 @@ const RegisterPage = () => {
       alert('Passwords do not match!')
       return
     }
-    console.log('Registering with:', { email, password })
+    console.log('Registering with:', { name, email, password })
     // Add your registration logic here
   }
 
@@ -24,22 +25,18 @@ const RegisterPage = () => {
         <h2>Register</h2>
         <form onSubmit={handleSubmit} className="auth-form">
           <label>
+            Full name
+            <input type="text" value={name}onChange={(e) => setName(e.target.value)} required/>
+          </label>
+
+          <label>
             Email
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}required/>
           </label>
 
           <label>
             Password
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}  required
             />
           </label>
 

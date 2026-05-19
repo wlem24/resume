@@ -8,6 +8,7 @@
 // TODO Day 5: move all state and logic to src/hooks/useEvaluator.js
 //             import and use the hook here instead
 import useEvaluator from '../hooks/useEvaluator'
+import { FaHome } from "react-icons/fa";
 
 export default function EvaluatorPage() {
   const {
@@ -28,8 +29,7 @@ export default function EvaluatorPage() {
     <main>
       <section className="form-section">
         <h2>Evaluate a Resume</h2>
-        <lable>Search bar</lable>
-        <input value={query} onChange={(e) => setQuery(e.target.value)}  />
+        
         <form id="evaluator-form" onSubmit={handleSubmit}>
           <label>
             Job Description
@@ -58,9 +58,9 @@ export default function EvaluatorPage() {
           {status === 'success' && result && (
             <pre className="result-output">{result}</pre>
           )}
-          {status === 'idle' && <p>Fill the form and click Evaluate to see the results.</p>}
+          {status === 'idle' && <p>Fill the form and click Evaluate to see the results</p>}
         </div>
       </section>
     </main>
-  )
+  ) 
 }
