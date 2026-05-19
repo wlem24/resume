@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Resume app with accessible form, file upload, and client-side evaluation.">
+    <title>Resume App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="globe.png">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <h1>Resume App</h1>
+    <p>Upload your CV and compare it with a job description.</p>
+  </div>
+  <nav aria-label="Primary navigation">
+    <a href="#register">Register</a>
+    <a href="#login">Login</a>
+    <a href="profile.html">Profile</a>
+  </nav>
+</header>
+
+<main class="page-grid two-column">
+
+  <section id="Welcome">
+    <h2>Welcome to the Resume App</h2>
+    <p>This page uses CSS Grid for layout, Flexbox for the header, and JavaScript to handle form submission without reloading.</p>
+    <span id="welcome"></span>
+  </section>
+
+
+
+
+  <section id="resume-evaluator" class="fade-in">
+    <h2>Submit Your Resume</h2>
+    <form id="resume-form">
+      <label for="job-description">Job description</label>
+      <textarea id="job-description" rows="5" placeholder="Paste the description"></textarea>
+
+      <label for="prompt">Custom prompt</label>
+      <textarea id="prompt" rows="3" placeholder="Add any details here"></textarea>
+
+      <label for="resume">Enter your CV</label>
+      <input type="file" id="resume" accept="application/pdf">
+
+      <button type="submit">Submit resume</button>
+    </form>
+    <div id="results" aria-live="polite"></div>
+  </section>
+  <section id="register" class="card fade-in">
+    <h2>Register</h2>
+    <form id="register-form">
+      <label for="register-name">Name</label>
+      <input type="text" id="register-name" name="register-name" placeholder="Enter your name" required>
+
+      <label for="register-email">Email</label>
+      <input type="email" id="register-email" name="register-email" placeholder="Enter your email" required>
+
+      <label for="register-password">Password</label>
+      <input type="password" id="register-password" name="register-password" placeholder="Create a password" required>
+
+      <button type="submit">Register</button>
+    </form>
+  </section>
+  <section id="login" class="card fade-in">
+    <h2>Login</h2>
+    <form id="login-form">
+      <label for="login-email">Email</label>
+      <input type="email" id="login-email" name="login-email" placeholder="Enter your email" required>
+
+      <label for="login-password">Password</label>
+      <input type="password" id="login-password" name="login-password" placeholder="Enter your password" required>
+
+      <button type="submit">Login</button>
+      <button type="button" id="reset-password-button" class="button-small">Reset password</button>
+    </form>
+  </section>
+</main>
+ <footer>
+    <p>&copy; 2026 Resume App | <a href="https://sda.weclouddata.com/">About</a></p>
+ </footer>
+
+ <div class="spinner-overlay" id="page-spinner" aria-hidden="true" role="status" aria-live="polite">
+   <div>
+     <div class="spinner"></div>
+     <div class="spinner-label"></div>
+   </div>
+ </div>
+
+ 
+</body>
+</html>
