@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer-content">
           <div className="footer-section">
             <h4>About</h4>
-            <p>Resume Evaluator helps you improve your resume with AI-powered feedback and recommendations.</p>
+            <p>Resume Evaluator helps you improve your resume.</p>
           </div>
 
           <div className="footer-section">

@@ -3,6 +3,7 @@
 import { Link } from 'react-router-dom'
 import { GrResume } from "react-icons/gr";
 import { IoIosLogIn } from "react-icons/io";
+
 function Header() {
   return (
     <header>
