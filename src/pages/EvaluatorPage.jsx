@@ -22,7 +22,7 @@ export default function EvaluatorPage() {
     result,
     handleFileChange,
     handleSubmit,
-    query, setQuery,
+    footer, setFooter,
   } = useEvaluator()
 
   return (

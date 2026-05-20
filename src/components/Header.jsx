@@ -7,8 +7,8 @@ function Header() {
   return (
     <header>
       <nav>
-        <Link to="/"><GrResume/>App Name</Link>
-        <Link to="/login"><IoIosLogIn />Login</Link>
+        <Link to="/">App Name   <GrResume/></Link>
+        <Link to="/login">Login   <IoIosLogIn /></Link>
         <Link to="/register">Register</Link>
       </nav>
     </header>
