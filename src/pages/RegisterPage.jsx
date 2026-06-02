@@ -8,8 +8,6 @@ const RegisterPage = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
-const [count, setCount] = useState(0)
-const { id } = useParams();
   const handleSubmit = (e) => {
     e.preventDefault()
     if (password !== confirmPassword) {
@@ -23,7 +21,6 @@ const { id } = useParams();
   return (
     <main className="auth-page">
       <div className="auth-card">
-        <h1>welcome user number {id}</h1>
         <h2>Register</h2>
         <form onSubmit={handleSubmit} className="auth-form">
           <label>
